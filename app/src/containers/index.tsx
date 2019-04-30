@@ -1,0 +1,9 @@
+export { default as Footer } from './Layout/Footer/Footer';
+export { default as Header } from './Layout/Header/Header';
+export { default as Layout } from './Layout/Layout';
+export { default as GridContainer } from './Grid/Grid';
+export { default as ImgContainer } from './ImgContainer/ImgContainer';
+export { default as Card } from './Card/Card';
+export { default as Loader } from './Loader/Loader';
+export { default as DeleteBtn } from './DeleteBtn/DeleteBtn';
+export { default as ImgPerformContainer } from './ImgPerformContainer/ImgPerformContainer';
