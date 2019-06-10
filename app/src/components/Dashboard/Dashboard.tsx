@@ -6,6 +6,7 @@ import { GridContainer, ImgContainer, ImgPerformContainer } from '../../containe
 import ImageContext from '../../contexts/ImageContext';
 import imageReduder, { initialState } from '../../reducers/image';
 import { IImageModel } from '../../models/image';
+import { AvailableFileExtension } from '../../containers';
 import * as imageActions from '../../actions/image';
 
 const DropZoneStyles: React.CSSProperties = {
@@ -26,6 +27,10 @@ const fileInput: React.CSSProperties = {
 	color: 'transparent',
 	background: 'transparent',
 	position: 'absolute',
+};
+
+const GridMargin: React.CSSProperties = {
+	marginBottom: '120px'
 };
 
 type ChangeEventOrDragEvent = React.DragEvent<HTMLInputElement> | React.ChangeEvent<HTMLInputElement>;
@@ -64,15 +69,15 @@ const Dashboard: React.StatelessComponent<IDashboard> = (props: IDashboard): JSX
 						dispatch,
 					}}
 				>
-					<Grid item sm={6} xs={12}>
+					<Grid style={GridMargin} item sm={6} xs={12}>
 						<ImgContainer />
 					</Grid>
-					<Grid item sm={6} xs={12}>
+					<Grid style={GridMargin} item sm={6} xs={12}>
 						<ImgPerformContainer />
 					</Grid>
 				</ImageContext.Provider>
 
-				<Grid style={DropZoneStyles} item sm={4} xs={12}>
+				<Grid style={DropZoneStyles} item sm={4} xs={6}>
 					<input
 						type="file"
 						style={fileInput}
@@ -80,6 +85,10 @@ const Dashboard: React.StatelessComponent<IDashboard> = (props: IDashboard): JSX
 						onChange={handleDrop}
 						onDrop={handleDrop}
 					/>
+
+				</Grid>
+				<Grid item sm={4} xs={6}>
+					<AvailableFileExtension />
 				</Grid>
 			</>
 		</GridContainer>

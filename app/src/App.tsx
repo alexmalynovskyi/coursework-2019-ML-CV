@@ -12,7 +12,7 @@ class App extends Component {
 		return (
 			<Layout>
 				<Switch>
-					<Route path="/" component={() => <Dashboard title="Oleksandr Malinovsky coursework" />} />
+					<Route path="/" component={() => <Dashboard title="Mike Pastula coursework" />} />
 				</Switch>
 			</Layout>
 		);

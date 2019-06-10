@@ -7,3 +7,4 @@ export { default as Card } from './Card/Card';
 export { default as Loader } from './Loader/Loader';
 export { default as DeleteBtn } from './DeleteBtn/DeleteBtn';
 export { default as ImgPerformContainer } from './ImgPerformContainer/ImgPerformContainer';
+export { default as AvailableFileExtension } from './AvailableFileExtension/AvailableFileExtension';

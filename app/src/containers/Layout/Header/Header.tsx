@@ -21,7 +21,7 @@ const styles = createStyles({
 	},
 });
 
-export interface Props extends WithStyles<typeof styles> {}
+export interface Props extends WithStyles<typeof styles> { }
 
 function ButtonAppBar(props: Props) {
 	const { classes } = props;
@@ -34,9 +34,9 @@ function ButtonAppBar(props: Props) {
 						<MenuIcon />
 					</IconButton>
 					<Typography variant="h6" color="inherit" className={classes.grow}>
-						Image recognizer
+						Image modifier
 					</Typography>
-					<Button color="inherit">Oleksandr Malinovsky</Button>
+					<Button color="inherit">Mike Pastula</Button>
 				</Toolbar>
 			</AppBar>
 		</div>
